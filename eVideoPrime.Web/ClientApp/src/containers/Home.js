@@ -29,8 +29,7 @@ export default function Home() {
                                     <p className='pt-1'>Running against the clock, IAF Squadron Leader Vijay Karnik created history with determination and his love for the country. A daredevil story of guts and glory....</p>
                                 </div>
                             </div>
-                            <div className="col-sm-1 image-gradient"></div>
-                            <div className="col-sm-6 "><img className='img-slider' src="images/mov-1-banner.webp" alt="..." /></div>
+                            <div className="col-sm-7 image-gradient"><img className='img-slider' src="images/mov-1-banner.webp" alt="..." /></div>
                         </div>
                     </div>
                     <div className="carousel-item" data-bs-interval={2000}>
@@ -42,8 +41,7 @@ export default function Home() {
                                     <p className='pt-1'>Based on the life of ace mathematician Anand Kumar, who trained 30 underprivileged students to crack one of the toughest entrance exams in India - IIT....</p>
                                 </div>
                             </div>
-                            <div className="col-sm-1  image-gradient"></div>
-                            <div className="col-sm-6 "><img className='img-slider' src="images/mov-2-banner.webp" alt="..." /></div>
+                            <div className="col-sm-7 image-gradient"><img className='img-slider' src="images/mov-2-banner.webp" alt="..." /></div>
                         </div>
                     </div>
                     <div className="carousel-item">
@@ -55,8 +53,7 @@ export default function Home() {
                                     <p className='pt-1'>A tell-all tale about the life and times of Indian cricketer, Mahendra Singh Dhoni; mapping his journey; from a ticket collector to a celebrated cricketer....</p>
                                 </div>
                             </div>
-                            <div className="col-sm-1 image-gradient"></div>
-                            <div className="col-sm-6"><img className='img-slider' src="images/mov-3-banner.webp" alt="..." /></div>
+                            <div className="col-sm-7 image-gradient"><img className='img-slider' src="images/mov-3-banner.webp" alt="..." /></div>
                         </div>
                     </div>
                 </div>
