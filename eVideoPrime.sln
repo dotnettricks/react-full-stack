@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{CD7B7974-D750-4A8C-9441-49898FA71FC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{9C383203-43C6-4ABE-9D4A-F132706E1C0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eVideoPrime.APIs", "eVideoPrime.APIs\eVideoPrime.APIs.csproj", "{3FD51135-BD45-4EE2-9B2C-EC8C3A2D25CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eVideoPrime.Web", "eVideoPrime.Web\eVideoPrime.Web.csproj", "{7C11B8AF-FE10-4241-B508-562258CFDB74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eVideoPrime.DAL", "eVideoPrime.DAL\eVideoPrime.DAL.csproj", "{D30C8384-EB06-4909-8790-9A54CF2706DA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eVideoPrime.Models", "eVideoPrime.DomainModels\eVideoPrime.Models.csproj", "{547F45D7-16C8-4FD9-83C4-F66D2A3EC3CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eVideoPrime.Services", "eVideoPrime.Services\eVideoPrime.Services.csproj", "{2AE80D20-DC21-4057-A3CF-661BF4AA5D8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FD51135-BD45-4EE2-9B2C-EC8C3A2D25CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD51135-BD45-4EE2-9B2C-EC8C3A2D25CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD51135-BD45-4EE2-9B2C-EC8C3A2D25CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD51135-BD45-4EE2-9B2C-EC8C3A2D25CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C11B8AF-FE10-4241-B508-562258CFDB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C11B8AF-FE10-4241-B508-562258CFDB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C11B8AF-FE10-4241-B508-562258CFDB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C11B8AF-FE10-4241-B508-562258CFDB74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D30C8384-EB06-4909-8790-9A54CF2706DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30C8384-EB06-4909-8790-9A54CF2706DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30C8384-EB06-4909-8790-9A54CF2706DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30C8384-EB06-4909-8790-9A54CF2706DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{547F45D7-16C8-4FD9-83C4-F66D2A3EC3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547F45D7-16C8-4FD9-83C4-F66D2A3EC3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547F45D7-16C8-4FD9-83C4-F66D2A3EC3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547F45D7-16C8-4FD9-83C4-F66D2A3EC3CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE80D20-DC21-4057-A3CF-661BF4AA5D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE80D20-DC21-4057-A3CF-661BF4AA5D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE80D20-DC21-4057-A3CF-661BF4AA5D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE80D20-DC21-4057-A3CF-661BF4AA5D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3FD51135-BD45-4EE2-9B2C-EC8C3A2D25CA} = {9C383203-43C6-4ABE-9D4A-F132706E1C0D}
+		{7C11B8AF-FE10-4241-B508-562258CFDB74} = {CD7B7974-D750-4A8C-9441-49898FA71FC5}
+		{D30C8384-EB06-4909-8790-9A54CF2706DA} = {9C383203-43C6-4ABE-9D4A-F132706E1C0D}
+		{547F45D7-16C8-4FD9-83C4-F66D2A3EC3CB} = {9C383203-43C6-4ABE-9D4A-F132706E1C0D}
+		{2AE80D20-DC21-4057-A3CF-661BF4AA5D8E} = {9C383203-43C6-4ABE-9D4A-F132706E1C0D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {324A1B84-DDAD-4994-A8B6-5B9B939CC5CA}
+	EndGlobalSection
+EndGlobal

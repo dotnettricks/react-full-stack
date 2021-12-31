@@ -1,0 +1,36 @@
+﻿a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.box-shadow {
+    box-shadow: rgb(0 0 0 / 38%) 0 2px 4px 0;
+}
+.image-gradient{
+        top: 0;
+        content: '';
+        padding: 0;
+        opacity: 0.5;
+        -webkit-transition: background 0.3s ease-in;
+        -o-transition: background 0.3s ease-in;
+        transition: background 0.3s ease-in;
+        background: -webkit-gradient(linear, left top, right top, from(var(--CARD_GRADIENT)), to(rgba(0,0,0,0)));
+        background: -webkit-linear-gradient(left, var(--CARD_GRADIENT), rgba(0,0,0,0));
+        background: -o-linear-gradient(left, var(--CARD_GRADIENT), rgba(0,0,0,0));
+        background: linear-gradient(to right, var(--CARD_GRADIENT), rgba(0,0,0,0));
+}
+.img-slider{
+    width: 640px;
+    height: 360px;
+}
