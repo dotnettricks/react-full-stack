@@ -31,8 +31,7 @@ export default function Movie() {
                         <Link to={`/movie/player/${id}`} className='btn btn-primary'>Watch Movie</Link>
                     </div>
                 </div>
-                <div className="col-sm-1 image-gradient"></div>
-                <div className='col-sm-6'>
+                <div className='col-sm-7 image-gradient'>
                     <img src={movieData.banner} alt="" />
                 </div>
             </div>
