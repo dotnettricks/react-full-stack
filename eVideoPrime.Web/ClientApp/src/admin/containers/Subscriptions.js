@@ -16,7 +16,7 @@ export default function Subscriptions() {
         if (window.confirm('Are you sure to delete?')) {
             SubscriptionService.Delete(id).then(res => {
                 if (res.status == 200) {
-                    SubscriptionService.GetAll().then(res => {
+                    SubscriptionService.GetAllUserSubscription().then(res => {
                         if (res.status == 200)
                             setSubscriptions(res.data);
                     });

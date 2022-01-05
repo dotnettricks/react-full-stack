@@ -30,19 +30,19 @@ namespace eVideoPrime.APIs.Controllers
         }
 
 
-        //[HttpDelete("{id}")]
-        //public IActionResult Delete(int id)
-        //{
-        //    try
-        //    {
-        //        _SubscriptionService.Delete(id);
-        //        return StatusCode(StatusCodes.Status200OK);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError);
-        //    }
-        //}
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _SubscriptionService.Delete(id);
+                return StatusCode(StatusCodes.Status200OK);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
 
     }
 }
