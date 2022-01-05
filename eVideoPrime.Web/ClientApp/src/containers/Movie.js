@@ -21,8 +21,8 @@ export default function Movie() {
         }
     });
     return (
-        <>
-            <div className='row' style={{ marginTop: '-16px', background: 'black' }}>
+        <div>
+            <div className='row' style={{ marginTop: '-20px', background: 'black' }}>
                 <div className='col-sm-5 text-white'>
                     <div className='container pt-5 px-5'>
                         <h4 className='pt-5'>{movieData.name}</h4>
@@ -32,7 +32,7 @@ export default function Movie() {
                     </div>
                 </div>
                 <div className='col-sm-7 image-gradient'>
-                    <img src={movieData.banner} alt="" />
+                    <img src={movieData.banner} alt="" className="img-slider"/>
                 </div>
             </div>
             <h2 className="mb-3 pt-4">Similar Movies</h2>
@@ -54,6 +54,6 @@ export default function Movie() {
                     })
                 }
             </div>
-        </>
+            </div>
     )
 }

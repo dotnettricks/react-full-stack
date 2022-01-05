@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eVideoPrime.DAL.Entities
 {
@@ -12,5 +13,10 @@ namespace eVideoPrime.DAL.Entities
         public DateTime SubscribedOn { get; set; }
         public DateTime ExpiryOn { get; set; }
         public int PlanId { get; set; }
+        [NotMapped]
+        public string UserName { get; set; }
+        [NotMapped]
+        public string PlanName { get; set; }
+        
     }
 }

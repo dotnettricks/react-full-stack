@@ -11,5 +11,6 @@ namespace eVideoPrime.DAL.Interfaces
     public interface ISubscriptionRepository : IRepository<Subscription>
     {
         Subscription GetUserSubscription(int UserId);
+        IEnumerable<Subscription> GetAllUserSubscription();
     }
 }

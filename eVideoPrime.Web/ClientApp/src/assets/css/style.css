@@ -45,3 +45,7 @@ html {
     background: linear-gradient(to right, #212529 50%,rgba(255,255,255,0) 80%);
     height: 100%;
 }
+.navbar {
+    
+    z-index: 1;
+}

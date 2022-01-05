@@ -4,6 +4,7 @@ namespace eVideoPrime.Services.Interfaces
 {
     public interface ISubscriptionService : IService<Subscription>
     {
-        Subscription GetUserSubscription(int UserId);
+        Subscription GetUserSubscription(int UserId); 
+      IEnumerable<Subscription> GetAllUserSubscription();
     }
 }
