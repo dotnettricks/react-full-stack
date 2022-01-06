@@ -32,6 +32,7 @@ namespace eVideoPrime.Services.Configuration
             services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
             services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddScoped<IUsersRepository, UsersRepository>();
+            services.AddScoped<IPaymentRepository, PaymentRepository>();
 
             //services
             services.AddScoped<IService<Movie>, Service<Movie>>();

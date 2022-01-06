@@ -14,5 +14,7 @@ namespace eVideoPrime.Services.Interfaces
         int SavePaymentDetails(PaymentDetail model);
         Payment GetPaymentDetails(string paymentId);
         bool VerifySignature(string signature, string orderId, string paymentId);
+
+        IEnumerable<PaymentDetail> GetAllUsersPayment(int UserId);
     }
 }

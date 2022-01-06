@@ -15,15 +15,17 @@ namespace eVideoPrime.Services.Implementations
 {
     //https://razorpay.com/integrations/
     //https://razorpay.com/docs/payment-gateway/web-integration/standard/
-    public class PaymentService : IPaymentService
+    public class PaymentService : Service<PaymentDetail>, IPaymentService
     {
         private readonly IOptions<RazorPayConfig> _razorPayConfig;
         private readonly RazorpayClient _client;
-        IRepository<PaymentDetail> _paymentRepo;
-        public PaymentService(IOptions<RazorPayConfig> razorPayConfig, IRepository<PaymentDetail> paymentRepo)
+        IRepository<PaymentDetail> _paymentRepos; 
+        private readonly IPaymentRepository _PaymentRepo;
+       
+        public PaymentService(IOptions<RazorPayConfig> razorPayConfig,  IPaymentRepository PaymentRepo,IRepository<PaymentDetail> paymentRepo) : base(paymentRepo)
         {
             _razorPayConfig = razorPayConfig;
-            _paymentRepo = paymentRepo;
+            _PaymentRepo = PaymentRepo;
             if (_client == null)
             {
                 _client = new RazorpayClient(_razorPayConfig.Value.Key, _razorPayConfig.Value.Secret);
@@ -85,8 +87,13 @@ namespace eVideoPrime.Services.Implementations
         }
         public int SavePaymentDetails(PaymentDetail model)
         {
-            _paymentRepo.Add(model);
-            return _paymentRepo.SaveChanges();
+            _paymentRepos.Add(model);
+            return _paymentRepos.SaveChanges();
+        }
+
+        public IEnumerable<PaymentDetail> GetAllUsersPayment(int UserId) {
+            IEnumerable<PaymentDetail> Payment = _PaymentRepo.GetAllUsersPayment(UserId);
+            return Payment;
         }
     }
 }

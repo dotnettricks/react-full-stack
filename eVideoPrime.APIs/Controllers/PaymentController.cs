@@ -76,6 +76,12 @@ namespace eVideoPrime.APIs.Controllers
                 return BadRequest();
             }
         }
+        [HttpPost]
+        public IEnumerable<PaymentDetail> GetAllUsersPayment(int UserId)
+        {
+            return _paymentService.GetAllUsersPayment(UserId);
+        }
+
 
     }
 }
