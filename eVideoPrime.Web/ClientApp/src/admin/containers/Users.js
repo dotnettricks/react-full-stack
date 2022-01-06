@@ -36,7 +36,7 @@ export default function Users() {
                         <th>Email</th>
                         <th>PhoneNumber</th>
                         <th>CreatedDate</th>
-                        <th style={{ width: '150px' }}>Actions</th>
+                       {/* <th style={{ width: '150px' }}>Actions</th>*/}
                     </tr>
                 </thead>
                 <tbody>
@@ -51,10 +51,10 @@ export default function Users() {
                                 <td>{data.email}</td>
                                 <td>{data.phoneNumber}</td>
                                 <td>{data.createdDate}</td>
-                                <td>
+                                {/*<td>*/}
 
-                                    <button className="btn btn-warning" onClick={(e) => deleteItem(data.id)}>Delete</button>
-                                </td>
+                                {/*    <button className="btn btn-warning" onClick={(e) => deleteItem(data.id)}>Delete</button>*/}
+                                {/*</td>*/}
                             </tr>
                         })
                     }
