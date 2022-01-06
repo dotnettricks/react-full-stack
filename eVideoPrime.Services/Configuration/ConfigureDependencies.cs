@@ -31,15 +31,18 @@ namespace eVideoPrime.Services.Configuration
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
             services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddScoped<IUsersRepository, UsersRepository>();
 
             //services
             services.AddScoped<IService<Movie>, Service<Movie>>();
             services.AddScoped<IService<Plan>, Service<Plan>>();
+            services.AddScoped<IService<User>, Service<User>>();
 
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped<ISubscriptionService, SubscriptionService>();
+            services.AddScoped<IUsersService, UsersService>();
         }
     }
 }

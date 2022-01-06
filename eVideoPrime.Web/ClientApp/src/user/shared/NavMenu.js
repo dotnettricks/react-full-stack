@@ -40,7 +40,7 @@ export default function NavMenu() {
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Welcome: {user.name}</a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a href="#" class="dropdown-item">Profile</a>
+                                <a href="/profile" class="dropdown-item">Profile</a>
                                 <a href="#" class="dropdown-item">Change Password</a>
                                 <div class="dropdown-divider"></div>
                                 <a className="nav-link" href="" onClick={SignOut}>SignOut</a>
