@@ -22,7 +22,7 @@ export default function Movie() {
     });
     return (
         <div>
-            <div className="row" style={{ marginTop: '-20px', background: '#212529' }}>
+            <div className="row" style={{ margin: '-20px 0', background: '#212529' }}>
                 <div className='col-sm-5 text-white'>
                     <div className='container pt-5 px-5'>
                         <h4 className='pt-5'>{movieData.name}</h4>
@@ -31,7 +31,7 @@ export default function Movie() {
                         <Link to={`/movie/player/${id}`} className='btn btn-primary'>Watch Movie</Link>
                     </div>
                 </div>
-                <div className='col-sm-7 image-gradient'>
+                <div className='col-sm-7 movie-gradient'>
                     <img src={movieData.banner} alt="" className="img-slider" />
                 </div>
             </div>
