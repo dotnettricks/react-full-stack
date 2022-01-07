@@ -12,6 +12,7 @@ html {
     html {
         font-size: 16px;
     }
+    
 }
 
 .box-shadow {
@@ -76,3 +77,24 @@ html {
     background: linear-gradient(to right, #212529 4%,rgba(255,255,255,0) 10%);
     height: 415px;
 }
+
+
+@media (max-width: 768px) {
+  
+    .text-white {
+        display: none;
+    }
+    .movie-gradient:after {
+        display:none;
+    }
+    .image-gradient:after {
+        display: none;
+    }
+
+    .movie-gradient {
+        opacity: 1;
+    }
+    .image-gradient {
+        opacity: 1;
+    }
+    }

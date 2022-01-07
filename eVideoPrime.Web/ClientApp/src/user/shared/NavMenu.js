@@ -21,7 +21,7 @@ export default function NavMenu() {
                 <div className="collapse navbar-collapse d-sm-inline-flex justify-content-end" id="collapsibleNavId">
                     <ul className="navbar-nav flex-grow-1">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="">Dashboard</NavLink>
+                            <NavLink className="nav-link" to="Dashboard">Dashboard</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="payments">Payment Details</NavLink>
@@ -40,7 +40,7 @@ export default function NavMenu() {
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Welcome: {user.name}</a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a href="/profile" class="dropdown-item">Profile</a>
+                                <NavLink className="dropdown-item" to="profile">Profile</NavLink>
                                 <a href="#" class="dropdown-item">Change Password</a>
                                 <div class="dropdown-divider"></div>
                                 <a className="nav-link" href="" onClick={SignOut}>SignOut</a>
