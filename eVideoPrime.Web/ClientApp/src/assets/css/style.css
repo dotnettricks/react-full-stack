@@ -41,11 +41,15 @@ html {
     display: block;
     position: absolute;
     top: 0;
-    left: 0;
-    background: linear-gradient(to right, #212529 50%,rgba(255,255,255,0) 80%);
+    left: 40%;
+    background: linear-gradient(to right, #212529 4%,rgba(255,255,255,0) 10%);
     height: 100%;
 }
 .navbar {
     
     z-index: 1;
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #fff !important;
 }

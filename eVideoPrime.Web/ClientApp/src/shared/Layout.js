@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet, Routes, Route } from 'react-router-dom';
+import { Outlet, Routes, Route, useLocation } from 'react-router-dom';
 
 import NavMenu from './NavMenu';
 
@@ -14,10 +14,12 @@ import Receipt from '../containers/Receipt';
 import Player from '../containers/Player';
 
 export default function Layout() {
+    let location = useLocation();
+    console.log(location);
     return (
         <div>
             <NavMenu />
-            <div className="container">
+            <div className={(location.pathname == '/' || location.pathname.indexOf('/movie') > -1) ? '' : 'container'}>
                 <Outlet />
                 <Routes>
                     <Route exact index element={<Home />}></Route>

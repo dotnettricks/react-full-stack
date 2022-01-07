@@ -21,7 +21,7 @@ export default function Home() {
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval={10000}>
-                        <div className="row" style={{ background: 'black' }}>
+                        <div className="row" style={{ background: '#212529' }}>
                             <div className="col-sm-5 text-white">
                                 <div className='container pt-5 px-5'>
                                     <h4 className='pt-5'>Mission Mangal</h4>
@@ -33,7 +33,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="carousel-item" data-bs-interval={2000}>
-                        <div className="row" style={{ background: 'black' }}>
+                        <div className="row" style={{ background: '#212529' }}>
                             <div className="col-sm-5 text-white">
                                 <div className='container pt-5 px-5'>
                                     <h4 className='pt-5'>Super 30</h4>
@@ -45,7 +45,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <div className="row" style={{ background: 'black' }}>
+                        <div className="row" style={{ background: '#212529' }}>
                             <div className="col-sm-5 text-white">
                                 <div className='container pt-5 px-5'>
                                     <h4 className='pt-5'>MS Dhoni: The Untold Story</h4>
@@ -57,23 +57,36 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true" />
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true" />
-                    <span className="visually-hidden">Next</span>
-                </button>
             </div>
-
-            <h2 className="mb-3 pt-4">Hindi Movies</h2>
-            <div className="row">
-                {
-                    movieData.map((item, index) => {
-                        if (item.language == "hindi") {
-                            return (
-                                <div key={index} className="col-sm-2" style={{ paddingBottom: '15px' }}>
+            <div className="container">
+                <h2 className="mb-3 pt-4">Hindi Movies</h2>
+                <div className="row">
+                    {
+                        movieData.map((item, index) => {
+                            if (item.language == "hindi") {
+                                return (
+                                    <div key={index} className="col-sm-2" style={{ paddingBottom: '15px' }}>
+                                        <Link to={`movie/${item.id}`}>
+                                            <div className="card box-shadow">
+                                                <img className="card-img-top" src={item.thumbnail} alt="" />
+                                                <div className="card-body d-none">
+                                                    <h4 className="card-title">{item.name}</h4>
+                                                    <h6 className="card-subtitle">{item.language}</h6>
+                                                    <p className="card-text">{item.summary}</p>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    </div>)
+                            }
+                        })
+                    }
+                </div>
+                <h2 className="mb-3 mt-3">English Movies</h2>
+                <div className="row">
+                    {
+                        movieData.map((item, index) => {
+                            if (item.language == "english") {
+                                return (<div key={index} className="col-sm-2" style={{ paddingBottom: '15px' }}>
                                     <Link to={`movie/${item.id}`}>
                                         <div className="card box-shadow">
                                             <img className="card-img-top" src={item.thumbnail} alt="" />
@@ -84,33 +97,13 @@ export default function Home() {
                                             </div>
                                         </div>
                                     </Link>
-                                </div>)
-                        }
-                    })
-                }
-            </div>
-            <h2 className="mb-3 mt-3">English Movies</h2>
-            <div className="row">
-                {
-                    movieData.map((item, index) => {
-                        if (item.language == "english") {
-                            return (<div key={index} className="col-sm-2" style={{ paddingBottom: '15px' }}>
-                                <Link to={`movie/${item.id}`}>
-                                    <div className="card box-shadow">
-                                        <img className="card-img-top" src={item.thumbnail} alt="" />
-                                        <div className="card-body d-none">
-                                            <h4 className="card-title">{item.name}</h4>
-                                            <h6 className="card-subtitle">{item.language}</h6>
-                                            <p className="card-text">{item.summary}</p>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
-                            )
-                        }
-            
-                    })
-                }
+                                </div>
+                                )
+                            }
+
+                        })
+                    }
+                </div>
             </div>
         </div>
     );
