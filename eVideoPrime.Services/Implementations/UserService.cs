@@ -4,16 +4,20 @@ using eVideoPrime.Services.Interfaces;
 
 namespace eVideoPrime.Services.Implementations
 {
-    public class UsersService : Service<User>, IUsersService
+    public class UserService : Service<User>, IUserService
     {
-        private readonly IUsersRepository _userRepo;
+        private readonly IUserRepository _userRepo;
 
-        public UsersService(IUsersRepository userRepo, IRepository<User> usersRepo) : base(usersRepo)
+        public UserService(IUserRepository userRepo) : base(userRepo)
         {
             _userRepo = userRepo;
         }
 
-        
+        public bool DeleteUser(int id)
+        {
+            return _userRepo.DeleteUser(id);
+        }
+
         public IEnumerable<User> GetAllUsers()
         {
             IEnumerable<User> users = _userRepo.GetAllUsers();

@@ -31,7 +31,7 @@ namespace eVideoPrime.Services.Configuration
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
             services.AddScoped<IMovieRepository, MovieRepository>();
-            services.AddScoped<IUsersRepository, UsersRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPaymentRepository, PaymentRepository>();
 
             //services
@@ -43,7 +43,7 @@ namespace eVideoPrime.Services.Configuration
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped<ISubscriptionService, SubscriptionService>();
-            services.AddScoped<IUsersService, UsersService>();
+            services.AddScoped<IUserService, UserService>();
         }
     }
 }

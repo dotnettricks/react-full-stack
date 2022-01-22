@@ -30,7 +30,9 @@ export default function Movie() {
             MovieService.Get(id).then(res => {
                 res.data.releaseDate = new Date(res.data.releaseDate);
                 // simulate async api call with set timeout
-                setTimeout(() => setMovieData(res.data), 10);
+                //setTimeout(() => setMovieData(res.data), 10);
+
+                setMovieData(res.data);
             });
         }
     }, []);

@@ -38,7 +38,7 @@ export default function Pricing() {
                 <p className="fs-5 text-muted">Join eVideoPrime to watch the latest movies and TV shows. Enjoy secure, ad-free entertainment at lower cost.</p>
             </div>
             <main>
-                <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div className="row text-center">
                     <div className="col">
                         <div className="card mb-4 rounded-3 shadow-sm border-default">
                             <div className="card-header py-3  bg-default border-default">

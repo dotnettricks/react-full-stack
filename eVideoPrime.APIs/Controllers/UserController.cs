@@ -9,19 +9,19 @@ namespace eVideoPrime.APIs.Controllers
     [EnableCors("AllowAll")]
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UserController : ControllerBase
     {
-        IUsersService _UsersService;
-        public UsersController(IUsersService UsersService)
+        IUserService _userService;
+        public UserController(IUserService userService)
         {
-            _UsersService = UsersService;
+            _userService = userService;
         }
 
-        
+
         [HttpGet]
         public IEnumerable<User> GetAllUsers()
         {
-            return _UsersService.GetAllUsers();
+            return _userService.GetAllUsers();
         }
 
 
@@ -30,14 +30,16 @@ namespace eVideoPrime.APIs.Controllers
         {
             try
             {
-                _UsersService.Delete(id);
-                return StatusCode(StatusCodes.Status200OK);
+                bool status = _userService.DeleteUser(id);
+                if (status)
+                    return Ok();
+                else
+                    return BadRequest();
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
-
     }
 }

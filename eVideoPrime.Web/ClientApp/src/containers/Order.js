@@ -39,7 +39,7 @@ export default function Payment() {
     const user = authUser.Get();
     useEffect(() => {
         let dataEnc = localStorage.getItem('p');
-        const planData = UtilService.Decrypt(dataEnc);        
+        const planData = UtilService.Decrypt(dataEnc);
         let order = { total: planData.total, currency: 'INR', receipt: 'NA' };
         PaymentService.CreateOrder(order).then((res) => {
            // console.log(res);
@@ -96,7 +96,7 @@ export default function Payment() {
 
         //console.log(payment);
         PaymentService.SavePaymentDetails(payment).then(res => {
-            console.log(res);
+            //console.log(res);
             if (res.status == 200) {
                 let encData = UtilService.Encrypt(res.data);
                 localStorage.setItem(RECEIPT_ID, encData);

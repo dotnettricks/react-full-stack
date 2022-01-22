@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace eVideoPrime.DAL.Interfaces
 {
-    public interface IUsersRepository : IRepository<User>
+    public interface IUserRepository : IRepository<User>
     {
         IEnumerable<User> GetAllUsers();
+        bool DeleteUser(int Id);
     }
 }
