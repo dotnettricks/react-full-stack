@@ -16,6 +16,7 @@ namespace eVideoPrime.Web.Controllers
         public FileController(IWebHostEnvironment env, IMovieService movieService)
         {
             _env = env;
+            _movieService = movieService;
         }
 
         [HttpPost, DisableRequestSizeLimit]
