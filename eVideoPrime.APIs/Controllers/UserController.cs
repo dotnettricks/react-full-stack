@@ -1,4 +1,5 @@
-﻿using eVideoPrime.DAL.Entities;
+﻿using eVideoPrime.APIs.FIlters;
+using eVideoPrime.DAL.Entities;
 using eVideoPrime.Services.Interfaces;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eVideoPrime.APIs.Controllers
 {
+    [CustomAuthorize]
     [EnableCors("AllowAll")]
     [Route("api/[controller]/[action]")]
     [ApiController]

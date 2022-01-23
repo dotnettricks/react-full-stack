@@ -33,7 +33,7 @@ namespace eVideoPrime.Web.Controllers
                 {
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
                     var fullPath = Path.Combine(pathToSave, fileName);
-                    var dbPath = "images/" + fileName;
+                    var dbPath = "/images/" + fileName;
 
                     using (var stream = new FileStream(fullPath, FileMode.Create))
                     {
@@ -83,7 +83,7 @@ namespace eVideoPrime.Web.Controllers
                     {
                         var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
                         var fullPath = Path.Combine(pathToSave, fileName);
-                        var filePath = "images/" + fileName;
+                        var filePath = "/images/" + fileName;
                         filesPaths.Add(filePath);
 
                         using (var stream = new FileStream(fullPath, FileMode.Create))

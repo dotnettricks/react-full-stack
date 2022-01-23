@@ -1,4 +1,5 @@
-﻿using eVideoPrime.DAL.Entities;
+﻿using eVideoPrime.APIs.FIlters;
+using eVideoPrime.DAL.Entities;
 using eVideoPrime.Services.Interfaces;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
@@ -6,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eVideoPrime.APIs.Controllers
 {
+
+    [CustomAuthorize(Roles = "Admin")]
     [EnableCors("AllowAll")]
     [Route("api/[controller]/[action]")]
     [ApiController]
@@ -36,19 +39,6 @@ namespace eVideoPrime.APIs.Controllers
             {
                 int id = _movieService.AddMovie(model);
                 return StatusCode(StatusCodes.Status201Created, id);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
-        }
-        [HttpPost]
-        public IActionResult UpdateImages(Movie model)
-        {
-            try
-            {
-                _movieService.UpdateImages(model);
-                return StatusCode(StatusCodes.Status200OK);
             }
             catch (Exception ex)
             {
