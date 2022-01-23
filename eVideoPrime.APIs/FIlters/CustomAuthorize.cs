@@ -47,11 +47,19 @@ namespace eVideoPrime.APIs.FIlters
                             context.Result = new UnauthorizedResult();
                         }
                     }
+                    else
+                    {
+                        context.Result = new UnauthorizedResult();
+                    }
                 }
                 catch (Exception ex)
                 {
                     context.Result = new StatusCodeResult(StatusCodes.Status500InternalServerError);
                 }               
+            }
+            else
+            {
+                context.Result = new UnauthorizedResult();
             }
         }
     }
